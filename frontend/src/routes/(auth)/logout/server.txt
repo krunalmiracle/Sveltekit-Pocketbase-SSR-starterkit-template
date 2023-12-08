@@ -1,0 +1,12 @@
+import { redirect, type RequestHandler } from "@sveltejs/kit";
+import { HttpStatusCode } from '$lib/util/statusCode';
+
+export const POST: RequestHandler = async (event) => {
+    try {
+        event.locals.pbServer.authStore.clear();
+        event.locals.user = null;
+    } catch (_) {
+        throw redirect(HttpStatusCode.PERMANENT_REDIRECT, "/");
+    }
+    throw redirect(HttpStatusCode.PERMANENT_REDIRECT, "/");
+};

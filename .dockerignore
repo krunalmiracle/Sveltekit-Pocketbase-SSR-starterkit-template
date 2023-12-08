@@ -1,0 +1,11 @@
+# flyctl launch added from svelte-app\.gitignore
+svelte-app\**\.DS_Store
+svelte-app\**\node_modules
+svelte-app\build
+svelte-app\.svelte-kit
+svelte-app\package
+!svelte-app\**\.env.example
+svelte-app\**\.env
+svelte-app\**\vite.config.js.timestamp-*
+svelte-app\**\vite.config.ts.timestamp-*
+fly.toml
